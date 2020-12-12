@@ -36,9 +36,10 @@ resp = requests.get(url)
 # openingHourList 下面：
 # 當天 weekday-hours today, 其他天 weekday-hours
 soup = BeautifulSoup(resp.text, 'html.parser')
-for row in soup.find_all('div', {'class': 'title-row'}):
-    restaurant_title = row.find('div', {'class':'title'}).text
-    print(restaurant_title)
+
+# for row in soup.find_all('div', {'class': 'title-row'}):
+#     restaurant_title = row.find('div', {'class':'title'}).text
+#     print(restaurant_title)
 for row in soup.find_all('div', {'class': 'jsx-2133253768'}):
     rating_star = row.find('div', {'class':'jsx-1207467136 text'})
     if rating_star == None:

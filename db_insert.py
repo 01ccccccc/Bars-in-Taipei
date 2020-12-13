@@ -93,6 +93,17 @@ mydb.commit()
 cur.close()
 print('Done')
 
+# error message 1213
+# Traceback (most recent call last):
+#   File "1206sql.py", line 85, in <module>
+#     cur.execute("INSERT INTO {table_name}({columns})values({values});".format(
+# mariadb.ProgrammingError: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': 0.1, name, rating, address, ave_price, url, tel, lat_lng, place_id)values("...' at line 1
+
+
+
+
+
+
 # 1212 
 # Those as follow are good references for learning database/python interfaces. 
 # https://www.datacamp.com/community/tutorials/mysql-python 

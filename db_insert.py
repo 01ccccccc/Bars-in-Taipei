@@ -82,7 +82,7 @@ for n in range(row_num):
     lst = list(df.iloc[1,:].astype('str'))
     lst = ['\"' + n + '\"' for n in lst]
 
-cur.execute("INSERT INTO {table_name}({columns})values({values});".format(
+cur.execute("INSERT INTO {table_name}({columns})"values"({values});".format(
     table_name = table_name,
     columns = ', '.join(list(df.columns)),
     values = ', '.join(lst)
